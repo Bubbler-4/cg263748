@@ -7,14 +7,14 @@ fn main() {
     ).0;
 
     let (num_result, elapsed) = solve_num(&input);
-    println!("elapsed: {}.{:06}", elapsed / 1000000, elapsed % 1000000);
+    println!("solve_num: {}.{:06}", elapsed / 1000000, elapsed % 1000000);
 
     let (dashu_result, elapsed) = solve_dashu(&input);
-    println!("elapsed: {}.{:06}", elapsed / 1000000, elapsed % 1000000);
+    println!("solve_dashu: {}.{:06}", elapsed / 1000000, elapsed % 1000000);
     assert_eq!(num_result, dashu_result);
 
     let (ntt128_result, elapsed) = solve_ntt128(&input);
-    println!("elapsed: {}.{:06}", elapsed / 1000000, elapsed % 1000000);
+    println!("solve_ntt128: {}.{:06}", elapsed / 1000000, elapsed % 1000000);
     assert_eq!(num_result, ntt128_result);
 
     println!("solve_ntt:");
